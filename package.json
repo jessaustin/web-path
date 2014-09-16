@@ -1,0 +1,27 @@
+{
+  "name": "web-path",
+  "version": "0.0.0",
+  "description": "clone of the path module that knows about trailing slashes on the web",
+  "keywords": [
+    "path"
+  ],
+  "author": "Jess Austin <jess.austin@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jessaustin/web-path.git"
+  },
+  "homepage": "https://github.com/jessaustin/web-path",
+  "devDependencies": {
+    "coffee-script": ">=1.7",
+    "coveralls": ">=2.11",
+    "ibrik": ">=1.1",
+    "tape": ">=2.14"
+  },
+  "main": "web-path.js",
+  "scripts": {
+    "prepublish": "coffee -c web-path.coffee",
+    "postpublish": "rm *.js",
+    "test": "ibrik cover test.coffee && coveralls < coverage/lcov.info"
+  }
+}
